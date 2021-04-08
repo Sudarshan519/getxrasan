@@ -8,5 +8,9 @@ class HomeBinding extends Bindings {
     Get.lazyPut<HomeController>(
       () => HomeController(),
     );
+    // Get.put(NetworkController(), permanent: true);
+    // Get.lazyPut<ProductControllerController>(
+    //   () => ProductControllerController(),
+    // );
   }
 }

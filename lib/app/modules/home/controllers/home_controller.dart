@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
-  ScrollController scrollController = ScrollController();
+  final scrollController = ScrollController();
   final selectedIndex = 0.obs;
+  var selectedTheme = 'lightTheme'.obs;
   var show = false.obs;
   @override
   void onInit() {
@@ -12,16 +13,26 @@ class HomeController extends GetxController {
     checkScroll();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void changeTheme(String value) {
+    selectedTheme.value = value;
+    if (value == 'lightTheme') {
+      Get.changeThemeMode(ThemeMode.light);
+    } else
+      Get.changeThemeMode(ThemeMode.dark);
   }
 
-  @override
-  void onClose() {}
+  changeThemeMode() {
+    bool dart = Get.isDarkMode;
+
+    if (dart)
+      Get.changeThemeMode(ThemeMode.light);
+    else if (!dart) Get.changeThemeMode(ThemeMode.dark);
+  }
+
   void checkScroll() {
     scrollController.addListener(() {
-      //print(scrollController.position.pixels);
+      // print(scrollController.position.pixels);
+
       if (scrollController.position.pixels > 80)
         show.value = true;
       else
@@ -32,4 +43,4 @@ class HomeController extends GetxController {
   void changevalue(index) => this.selectedIndex.value = index;
 }
 
-final homeController = Get.put(HomeController(), permanent: true);
+final homeController = Get.find<HomeController>();

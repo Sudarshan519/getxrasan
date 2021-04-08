@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-class ForgotpassView extends GetView {
+import '../controllers/detail_controller.dart';
+
+class DetailView extends GetView<DetailController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ForgotpassView'),
+        title: Text('DetailView'),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'ForgotpassView is working',
+          'DetailView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

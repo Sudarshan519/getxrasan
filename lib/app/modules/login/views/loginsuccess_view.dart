@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:rasanmart/app/modules/home/views/home_view.dart';
 
 class LoginsuccessView extends GetView {
   @override
@@ -27,16 +28,21 @@ class LoginsuccessView extends GetView {
             'Login Success',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-          Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                color: Colors.orange[900],
-                borderRadius: BorderRadius.circular(20)),
-            height: 50,
-            width: 200,
-            child: Text(
-              'Back to home',
-              style: TextStyle(color: Colors.white),
+          InkWell(
+            onTap: () {
+              Get.to(() => HomeView());
+            },
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: Colors.orange[900],
+                  borderRadius: BorderRadius.circular(20)),
+              height: 50,
+              width: 200,
+              child: Text(
+                'Back to home',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           )
         ]));

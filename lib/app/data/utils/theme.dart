@@ -8,6 +8,7 @@ class CustomTheme {
       //2
 
       primaryColor: Colors.red.shade900,
+      backgroundColor: Colors.red.shade900,
       scaffoldBackgroundColor: Colors.white,
       accentColor: Colors.red.shade800,
       fontFamily: 'Montserrat', //3

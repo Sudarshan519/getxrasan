@@ -8,6 +8,10 @@ abstract class Routes {
   static const SIGNUP = _Paths.SIGNUP;
   static const COMPLETEPROFILE = _Paths.COMPLETEPROFILE;
   static const ONBOARDING = _Paths.ONBOARDING;
+  static const CART = _Paths.CART;
+  static const DETAIL = _Paths.DETAIL;
+  static const CATEGORYDETAIL = _Paths.CATEGORYDETAIL;
+  static const SEARCH_RESULT = _Paths.SEARCH_RESULT;
 }
 
 abstract class _Paths {
@@ -17,4 +21,8 @@ abstract class _Paths {
   static const SIGNUP = '/signup';
   static const COMPLETEPROFILE = '/completeprofile';
   static const ONBOARDING = '/onboarding';
+  static const CART = '/cart';
+  static const DETAIL = '/detail';
+  static const CATEGORYDETAIL = '/categorydetail';
+  static const SEARCH_RESULT = '/search-result';
 }
